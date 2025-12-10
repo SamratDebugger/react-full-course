@@ -1,12 +1,16 @@
+const loginSatusButton = (status) => {
+  if (status) {
+    return <button>logout</button>;
+  } else {
+    return <button>login </button>;
+  }
+};
+
 export default function App() {
-  const heros = ["Superman", "Batman", "Iron man", "Spider man"];
   return (
-    <>
-      <ul>
-        {heros.map((item, i) => {
-          return <li key={i.toString}>{item}</li>;
-        })}
-      </ul>
-    </>
+    <div>
+      <h1>login Status</h1>
+      {loginSatusButton(false)}
+    </div>
   );
 }
